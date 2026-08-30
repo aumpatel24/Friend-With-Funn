@@ -68,7 +68,7 @@
         const yesBtn = document.getElementById("yesBtn");
         const noBtn = document.getElementById("noBtn");
 
-        // YES button માટે screenની અંદરની safe positions
+        // YES button positions
         const positions = [
             {left: "15%", top: "20%"},
             {left: "50%", top: "15%"},
@@ -82,8 +82,10 @@
 
         let positionIndex = 0;
 
+        // YES button કેટલા વખત try/click થયું
+        let yesCount = 0;
 
-        // YES button પર mouse પહોંચે ત્યારે
+        // YES button પર mouse આવે
         yesBtn.addEventListener("mouseenter", function () {
 
             moveYesButton();
@@ -101,6 +103,23 @@
         });
 
 
+        // YES button click
+        yesBtn.addEventListener("click", function () {
+
+            yesCount++;
+
+            console.log("YES clicked:", yesCount);
+
+            // 15 વખત પછી YES page પર જવું
+            if (yesCount >= 15) {
+
+                window.location.href = "yes.html";
+
+            }
+
+        });
+
+
         function moveYesButton() {
 
             const position = positions[positionIndex];
@@ -111,13 +130,11 @@
 
             yesBtn.style.top = position.top;
 
-            // Button પોતાનું center position પર રાખશે
             yesBtn.style.transform = "translate(-50%, -50%)";
 
             yesBtn.style.zIndex = "99999";
 
 
-            // આગળની position
             positionIndex++;
 
             if (positionIndex >= positions.length) {

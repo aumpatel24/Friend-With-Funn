@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="gu">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yesss! ❤️</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #ff758c,
+                #ff7eb3,
+                #ffb199
+            );
+
+            overflow: hidden;
+
+        }
+
+
+        .card {
+
+            width: 90%;
+
+            max-width: 650px;
+
+            padding: 50px 30px;
+
+            background: rgba(255, 255, 255, 0.95);
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.2);
+
+            animation: pop 0.8s ease;
+
+        }
+
+
+        .emoji {
+
+            font-size: 90px;
+
+            animation: bounce 1.2s infinite;
+
+        }
+
+
+        h1 {
+
+            margin-top: 20px;
+
+            font-size: 42px;
+
+            color: #ff3b6b;
+
+        }
+
+
+        p {
+
+            margin-top: 20px;
+
+            font-size: 24px;
+
+            line-height: 1.6;
+
+            color: #555;
+
+        }
+
+
+        .love {
+
+            margin-top: 25px;
+
+            font-size: 45px;
+
+        }
+
+
+        @keyframes pop {
+
+            from {
+
+                transform: scale(0.5);
+
+                opacity: 0;
+
+            }
+
+            to {
+
+                transform: scale(1);
+
+                opacity: 1;
+
+            }
+
+        }
+
+
+        @keyframes bounce {
+
+            0%, 100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-20px);
+
+            }
+
+        }
+
+
+        /* Floating hearts */
+
+        .heart {
+
+            position: fixed;
+
+            bottom: -50px;
+
+            font-size: 30px;
+
+            animation: float 5s linear infinite;
+
+        }
+
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(2) {
+            left: 30%;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(3) {
+            left: 50%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(4) {
+            left: 70%;
+            animation-delay: 3s;
+        }
+
+        .heart:nth-child(5) {
+            left: 90%;
+            animation-delay: 4s;
+        }
+
+
+        @keyframes float {
+
+            0% {
+
+                bottom: -50px;
+
+                opacity: 0;
+
+            }
+
+            20% {
+
+                opacity: 1;
+
+            }
+
+            100% {
+
+                bottom: 110%;
+
+                opacity: 0;
+
+                transform: rotate(360deg);
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="heart">❤️</div>
+    <div class="heart">💖</div>
+    <div class="heart">💕</div>
+    <div class="heart">💗</div>
+    <div class="heart">💝</div>
+
+
+    <div class="card">
+
+        <div class="emoji">
+            🥰❤️
+        </div>
+
+
+        <h1>
+            Yessss! ❤️
+        </h1>
+
+
+        <p>
+            હવે તમે મારા મિત્ર બની ગયા! 🥹💕
+            <br><br>
+
+            15 વખત "હા" કહેવાની રાહ જોયા પછી...
+            <br>
+
+            આખરે તમે હા કહી જ દીધી! 😍
+        </p>
+
+
+        <div class="love">
+            🫶 💕 🥰 💖 🫶
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
