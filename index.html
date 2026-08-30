@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="gu">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>મારા મિત્ર બનશો? ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="hearts">
+
+        <span>❤️</span>
+        <span>💖</span>
+        <span>💕</span>
+        <span>💗</span>
+        <span>❤️</span>
+        <span>💓</span>
+        <span>💞</span>
+        <span>💝</span>
+
+    </div>
+
+
+    <!-- Main Card -->
+    <div class="card">
+
+        <div class="main-emoji">
+            🥰
+        </div>
+
+        <h1>
+            શું તમે મારા મિત્ર બનશો?
+        </h1>
+
+        <p>
+            એક નાનકડો સવાલ છે... 💕
+            <br>
+            દિલથી જવાબ આપજો! 😊
+        </p>
+
+
+        <div class="buttons">
+
+            <button id="yesBtn">
+                હા ❤️
+            </button>
+
+            <button id="noBtn">
+                ના 😢
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+
+        // YES button માટે screenની અંદરની safe positions
+        const positions = [
+            {left: "15%", top: "20%"},
+            {left: "50%", top: "15%"},
+            {left: "80%", top: "20%"},
+            {left: "85%", top: "50%"},
+            {left: "75%", top: "80%"},
+            {left: "50%", top: "85%"},
+            {left: "20%", top: "80%"},
+            {left: "15%", top: "50%"}
+        ];
+
+        let positionIndex = 0;
+
+
+        // YES button પર mouse પહોંચે ત્યારે
+        yesBtn.addEventListener("mouseenter", function () {
+
+            moveYesButton();
+
+        });
+
+
+        // Mobile માટે
+        yesBtn.addEventListener("touchstart", function (e) {
+
+            e.preventDefault();
+
+            moveYesButton();
+
+        });
+
+
+        function moveYesButton() {
+
+            const position = positions[positionIndex];
+
+            yesBtn.style.position = "fixed";
+
+            yesBtn.style.left = position.left;
+
+            yesBtn.style.top = position.top;
+
+            // Button પોતાનું center position પર રાખશે
+            yesBtn.style.transform = "translate(-50%, -50%)";
+
+            yesBtn.style.zIndex = "99999";
+
+
+            // આગળની position
+            positionIndex++;
+
+            if (positionIndex >= positions.length) {
+
+                positionIndex = 0;
+
+            }
+
+        }
+
+
+        // NO button
+        noBtn.addEventListener("click", function () {
+
+            window.location.href = "sad.html";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
